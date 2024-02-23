@@ -162,8 +162,8 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
     }
         
     // road 2
-    double dou_halfOfInitiM = (double) M1 / 2.0;
-    int halfOfInitM = ceil(dou_halfOfInitiM);
+    // don't round up because it just comparation
+    int halfOfInitM = M1 / 2;
     // if E2 is an odd number
     if (E2 % 2 != 0)
     {
@@ -271,9 +271,7 @@ end:
     }
     else 
     {
-        cout << "P1: " << P1 << ", P2: " << P2 << ", P3: " << P3 << endl;
         double avgProb = (P1 + P2 + P3) / 3.0;
-        cout << avgProb << endl;
         if (avgProb < 50.0)
         {
             double dou_hp = (double) HP1 * 0.85;
@@ -345,7 +343,7 @@ int chaseTaxi(int & HP1, int & EXP1, int & HP2, int & EXP2, int E3) {
     from1To2Digits(meetY);
 
     // they don't catch the taxi 
-    if (abs(taxiScore[meetX][meetY]) > snwScore[meetX][meetY])
+    if (abs(taxiScore[meetX][meetY]) > abs(snwScore[meetX][meetY]))
     {   // Sherlock and Watson will be decreased by 10% of their HP
         // and 12% of their EXP
         double dou_exp1 = (double) EXP1 * 0.88;

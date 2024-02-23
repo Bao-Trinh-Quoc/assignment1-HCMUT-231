@@ -25,9 +25,17 @@ void sa_tc_01() {
     int result = firstMeet(EXP1, EXP2, E1);
     cout << "EXP1: " << EXP1 << ", EXP2: " << EXP2 << ", result: " << result << endl;
 }
+void sa_tc_04() 
+{
+    cout << "----- Sample Testcase 04 -----" << endl;
+    int E2 = 39, HP1 = 333, EXP1 = 430, M1 = 890;
+    cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << endl;
+    int result = traceLuggage(HP1, EXP1, M1, E2);
+    cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << ", result: " << result << endl;
+}
 
 int main(int argc, const char * argv[]) {
-    sa_tc_01();
-
+    // sa_tc_01();
+    sa_tc_04();
     return 0;
 }
