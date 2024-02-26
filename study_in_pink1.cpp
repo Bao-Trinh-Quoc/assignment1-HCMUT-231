@@ -326,7 +326,8 @@ int chaseTaxi(int & HP1, int & EXP1, int & HP2, int & EXP2, int E3) {
     {
         for (int j = 0; j < MAX_ELEMENT; j++)
         {
-            snwScore[i][j] = maxDiagonal(taxiScore, i, j, taxiScore[i][j]);
+            // If this score is negative, take its absolute value.
+            snwScore[i][j] = abs(maxDiagonal(taxiScore, i, j, taxiScore[i][j]));
         }
     }
     // calculate meeting point 
@@ -349,7 +350,7 @@ int chaseTaxi(int & HP1, int & EXP1, int & HP2, int & EXP2, int E3) {
     from1To2Digits(meetY);
 
     // they don't catch the taxi 
-    if (abs(taxiScore[meetX][meetY]) > abs(snwScore[meetX][meetY]))
+    if (abs(taxiScore[meetX][meetY]) > snwScore[meetX][meetY])
     {   // Sherlock and Watson will be decreased by 10% of their HP
         // and 12% of their EXP
         double dou_exp1 = (double) EXP1 * 0.88;
@@ -378,7 +379,6 @@ int chaseTaxi(int & HP1, int & EXP1, int & HP2, int & EXP2, int E3) {
         double dou_exp2 = (double) EXP2 * 1.12;
         EXP2 = ceil(dou_exp2 - 0.0000001);
         double dou_hp1 = (double) HP1 * 1.10;
-        cout << dou_hp1 << endl;
         HP1 = ceil(dou_hp1 - 0.0000001);
         double dou_hp2 = (double) HP2 * 1.10;
         HP2 = ceil(dou_hp2 - 0.0000001);    

@@ -17,12 +17,16 @@ void sa_tc_01();    // sample testcase
 void sa_tc_02();    // testcase for firstMeet
 void sa_tc_03();    // testcase for firstMeet
 void sa_tc_04();    // testcase for traceLuggage
+void sa_tc_05();    // testcase for chaseTaxi
+void sa_tc_06();    // testcase for chaseTaxi
 
 int main(int argc, const char * argv[]) {
     // sa_tc_01();
     // sa_tc_02();
     // sa_tc_03();
-    sa_tc_04();
+    // sa_tc_04();
+    sa_tc_05();
+    sa_tc_06();
     return 0;
 }
 
@@ -63,4 +67,26 @@ void sa_tc_04()
     cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << endl;
     int result = traceLuggage(HP1, EXP1, M1, E2);
     cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << ", result: " << result << endl;
+}
+
+void sa_tc_05()
+{
+    cout << "----- Sample Testcase 05 -----" << endl;
+    int hp1 = 400, hp2 = 350;
+    int exp1 = 600, exp2 = 500;
+    int e3 = 59;
+    cout << "hp1: " << hp1 << ", hp2: " << hp2 << ", exp1: " << exp1 << ", exp2: " << exp2 << ", e3: " << e3 << endl;
+    int result = chaseTaxi(hp1, exp1, hp2, exp2, e3);
+    cout << "hp1: " << hp1 << ", hp2: " << hp2 << ", exp1: " << exp1 << ", exp2: " << exp2 << ", e3: " << e3 << ", result: " << result << endl;
+}
+
+void sa_tc_06()
+{
+    cout << "----- Sample Testcase 06 -----" << endl;
+    int hp1 = 400, hp2 = 350;
+    int exp1 = 600, exp2 = 500;
+    int e3 = 99;
+    cout << "hp1: " << hp1 << ", hp2: " << hp2 << ", exp1: " << exp1 << ", exp2: " << exp2 << ", e3: " << e3 << endl;
+    int result = chaseTaxi(hp1, exp1, hp2, exp2, e3);
+    cout << "hp1: " << hp1 << ", hp2: " << hp2 << ", exp1: " << exp1 << ", exp2: " << exp2 << ", e3: " << e3 << ", result: " << result << endl;
 }

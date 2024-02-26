@@ -11,5 +11,6 @@ changed 164-166 from round up to normal counting
 changed to if (abs(taxiScore[meetX][meetY]) > abs(snwScore[meetX][meetY])) in 348
 # 26/2/2024
 wrote some testcases
-checked firstMeet --- done
-checked traceLuggage --- done
+checked firstMeet       --- done
+checked traceLuggage    --- done
+checked chaseTax        --- done
