@@ -17,3 +17,5 @@ checked chaseTax        --- done <br>
 changed order of violations in checkPassword <br>
 changed logic in checkPassword --- valid char <br>
 checked findCorrectPassword --- done <br>
+
+<---> testing for git credentials problem 
