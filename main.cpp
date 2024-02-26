@@ -21,16 +21,20 @@ void sa_tc_05();    // testcase for chaseTaxi
 void sa_tc_06();    // testcase for chaseTaxi
 void sa_tc_07();    // testcase for checkPassword
 void sa_tc_08();    // testcase for checkPassword
+void sa_tc_09();    // testcase for findCorrectPassword
+void sa_tc_10();    // testcase for findCorrectPassword
 
 int main(int argc, const char * argv[]) {
-    // sa_tc_01();
-    // sa_tc_02();
-    // sa_tc_03();
-    // sa_tc_04();
-    // sa_tc_05();
-    // sa_tc_06();
-    sa_tc_07();
-    sa_tc_08();
+    // sa_tc_01();              // sample testcase
+    // sa_tc_02();              // testcase for firstMeet
+    // sa_tc_03();              // testcase for firstMeet
+    // sa_tc_04();              // testcase for traceLuggage
+    // sa_tc_05();              // testcase for chaseTaxi
+    // sa_tc_06();              // testcase for chaseTaxi
+    // sa_tc_07();              // testcase for checkPassword
+    // sa_tc_08();              // testcase for checkPassword
+    sa_tc_09();                 // testcase for findCorrectPassword
+    sa_tc_10();                 // testcase for findCorrectPassword
     return 0;
 }
 
@@ -112,5 +116,21 @@ void sa_tc_08()
     const char *s = "012345pink#pink";
     cout << "email: " << email << ", password: " << s << endl;
     int result = checkPassword(s, email);
+    cout << result << endl;
+}
+
+void sa_tc_09()
+{
+    cout << "----- Sample Testcase 09 -----" << endl;
+    const char *arr_pwds[] = {"1234#xyz", "pink#pink", "pink@123", "123!pink", "pink#pink", "pink@123", "pink@123"};
+    int result = findCorrectPassword(arr_pwds, 7);
+    cout << result << endl;
+}
+
+void sa_tc_10()
+{
+    cout << "----- Sample Testcase 10 -----" << endl;
+    const char *arr_pwds[] = {"pink@123", "123!pink", "1234#xyz", "pink#pink", "pink#pink", "pink@123"};
+    int result = findCorrectPassword(arr_pwds, 6);
     cout << result << endl;
 }

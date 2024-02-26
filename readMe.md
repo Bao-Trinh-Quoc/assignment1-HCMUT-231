@@ -16,3 +16,4 @@ checked traceLuggage    --- done <br>
 checked chaseTax        --- done <br>
 changed order of violations in checkPassword <br>
 changed logic in checkPassword --- valid char <br>
+checked findCorrectPassword --- done <br>
