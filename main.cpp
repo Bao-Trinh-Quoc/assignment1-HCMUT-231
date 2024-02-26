@@ -25,14 +25,14 @@ void sa_tc_09();    // testcase for findCorrectPassword
 void sa_tc_10();    // testcase for findCorrectPassword
 
 int main(int argc, const char * argv[]) {
-    // sa_tc_01();              // sample testcase
-    // sa_tc_02();              // testcase for firstMeet
-    // sa_tc_03();              // testcase for firstMeet
-    // sa_tc_04();              // testcase for traceLuggage
-    // sa_tc_05();              // testcase for chaseTaxi
-    // sa_tc_06();              // testcase for chaseTaxi
-    // sa_tc_07();              // testcase for checkPassword
-    // sa_tc_08();              // testcase for checkPassword
+    sa_tc_01();              // sample testcase
+    sa_tc_02();              // testcase for firstMeet
+    sa_tc_03();              // testcase for firstMeet
+    sa_tc_04();              // testcase for traceLuggage
+    sa_tc_05();              // testcase for chaseTaxi
+    sa_tc_06();              // testcase for chaseTaxi
+    sa_tc_07();              // testcase for checkPassword
+    sa_tc_08();              // testcase for checkPassword
     sa_tc_09();                 // testcase for findCorrectPassword
     sa_tc_10();                 // testcase for findCorrectPassword
     return 0;
