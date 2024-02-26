@@ -146,6 +146,7 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
     // handle edge cases
     if (E2 < 0 || E2 > 99)
         return -99;
+    // ensure exp hp M are in range
     ensureExpRange(EXP1);
     ensureHPRange(HP1);
     ensureMRange(M1);
@@ -205,11 +206,12 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
             if (M1 < halfOfInitM)
                 goto end;
         }
-        // cout << "M1: " << M1 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << endl;
     }
     else 
     {
-        // just do the same thing as the previous case one time
+            // just do the same thing as the previous case one time
+            if (M1 <= 0)
+                goto end;
             // drink or eat
             if (HP1 < 200) 
             {   // eat
@@ -300,8 +302,6 @@ end:
 // Task 3
 int chaseTaxi(int & HP1, int & EXP1, int & HP2, int & EXP2, int E3) {
     // TODO: Complete this function
-    int taxiScore[MAX_ELEMENT][MAX_ELEMENT] = {0};
-    int snwScore[MAX_ELEMENT][MAX_ELEMENT] = {0};
     // handle edge cases
     ensureExpRange(EXP1);
     ensureHPRange(HP1);
@@ -309,6 +309,10 @@ int chaseTaxi(int & HP1, int & EXP1, int & HP2, int & EXP2, int E3) {
     ensureExpRange(EXP2);
     if (E3 < 0 || E3 > 99)
         return -99;
+
+    int taxiScore[MAX_ELEMENT][MAX_ELEMENT] = {0};
+    int snwScore[MAX_ELEMENT][MAX_ELEMENT] = {0};
+
     // calculate taxiScore
     for (int i = 0; i < MAX_ELEMENT; i++)
     {

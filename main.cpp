@@ -13,12 +13,16 @@
 
 using namespace std;
 
-void sa_tc_01();
-void sa_tc_04();
+void sa_tc_01();    // sample testcase 
+void sa_tc_02();    // testcase for firstMeet
+void sa_tc_03();    // testcase for firstMeet
+void sa_tc_04();    // testcase for traceLuggage
 
 int main(int argc, const char * argv[]) {
-    sa_tc_01();
-    // sa_tc_04();
+    // sa_tc_01();
+    // sa_tc_02();
+    // sa_tc_03();
+    sa_tc_04();
     return 0;
 }
 
@@ -33,6 +37,24 @@ void sa_tc_01() {
     cout << "EXP1: " << EXP1 << ", EXP2: " << EXP2 << ", E1: " << E1 << endl;
     int result = firstMeet(EXP1, EXP2, E1);
     cout << "EXP1: " << EXP1 << ", EXP2: " << EXP2 << ", result: " << result << endl;
+}
+void sa_tc_02()
+{
+    cout << "----- Sample Testcase 02 -----" << endl;
+    int exp1 = 500, exp2 = 450;
+    int e1 = 40;
+    cout << "exp1: " << exp1 << ", exp2: " << exp2 << ", e1: " << e1 << endl;
+    int result = firstMeet(exp1, exp2, e1);
+    cout << "exp1: " << exp1 << ", exp2: " << exp2 << ", result: " << result << endl;
+}
+void sa_tc_03()
+{
+    cout << "----- Sample Testcase 03 -----" << endl;
+    int exp1 = 500, exp2 = 450;
+    int e1 = 81;
+    cout << "exp1: " << exp1 << ", exp2: " << exp2 << ", e1: " << e1 << endl;
+    int result = firstMeet(exp1, exp2, e1);
+    cout << "exp1: " << exp1 << ", exp2: " << exp2 << ", result: " << result << endl;
 }
 void sa_tc_04() 
 {
