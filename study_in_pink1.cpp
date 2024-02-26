@@ -37,12 +37,13 @@ bool readFile(
 // Task 1
 int firstMeet(int & exp1, int & exp2, int e1) {
     // TODO: Complete this function
-    // handle edge cases
-    ensureExpRange(exp1);
-    ensureExpRange(exp2);
     // if e1 is not in range [0, 99], return -999
     if (e1 < 0 || e1 > 99)
         return -99;
+    // handle edge cases
+    ensureExpRange(exp1);
+    ensureExpRange(exp2);
+
     
     // in the case e1 is in range [0, 3], Sherlock explains how he knows Watson has 
     // been to Afghanistan, and the value of exp2 is updated as follows:
