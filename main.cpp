@@ -19,14 +19,18 @@ void sa_tc_03();    // testcase for firstMeet
 void sa_tc_04();    // testcase for traceLuggage
 void sa_tc_05();    // testcase for chaseTaxi
 void sa_tc_06();    // testcase for chaseTaxi
+void sa_tc_07();    // testcase for checkPassword
+void sa_tc_08();    // testcase for checkPassword
 
 int main(int argc, const char * argv[]) {
     // sa_tc_01();
     // sa_tc_02();
     // sa_tc_03();
     // sa_tc_04();
-    sa_tc_05();
-    sa_tc_06();
+    // sa_tc_05();
+    // sa_tc_06();
+    sa_tc_07();
+    sa_tc_08();
     return 0;
 }
 
@@ -89,4 +93,24 @@ void sa_tc_06()
     cout << "hp1: " << hp1 << ", hp2: " << hp2 << ", exp1: " << exp1 << ", exp2: " << exp2 << ", e3: " << e3 << endl;
     int result = chaseTaxi(hp1, exp1, hp2, exp2, e3);
     cout << "hp1: " << hp1 << ", hp2: " << hp2 << ", exp1: " << exp1 << ", exp2: " << exp2 << ", e3: " << e3 << ", result: " << result << endl;
+}
+
+void sa_tc_07()
+{
+    cout << "----- Sample Testcase 07 -----" << endl;
+    const char *email = "pink@gmail.com";
+    const char *s = "123xyz";
+    cout << "email: " << email << ", password: " << s << endl;
+    int result = checkPassword(s, email);
+    cout << result << endl;
+}
+
+void sa_tc_08()
+{
+    cout << "----- Sample Testcase 08 -----" << endl;
+    const char *email = "pink@gmail.com";
+    const char *s = "012345pink#pink";
+    cout << "email: " << email << ", password: " << s << endl;
+    int result = checkPassword(s, email);
+    cout << result << endl;
 }

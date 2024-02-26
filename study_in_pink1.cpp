@@ -406,25 +406,24 @@ int checkPassword(const char * s, const char * email) {
         return -1;
     if (strlen(s) > 20)
         return -2;
-    // se violations
-    if (string(s).find(se) != string::npos)
-        return -(300 + string(s).find(se));
-    // 2 consecutive characters violations
-    if (moreThan2ConsecutiveChar(s) != -1)
-        return -(400 + moreThan2ConsecutiveChar(s));
 
     // each character in s can only be a number or a lowercase or
     // uppercase letter or a special character: @ # $ % !
     for (int i = 0, n = strlen(s); i < n; i++)
     {   
         // if s[i] is not a number or a letter or a special character
-        if (!isdigit(s[i]) || !isalpha(s[i]) || s[i] != '@' || s[i] != '#' || s[i] != '$' || s[i] != '%' || s[i] != '!')
+        if (!isdigit(s[i]) && !isalpha(s[i]) && s[i] != '@' && s[i] != '#' && s[i] != '$' && s[i] != '%' && s[i] != '!')
             return i;
         // if s[i] is a special character
         if (s[i] == '@' || s[i] == '#' || s[i] == '$' || s[i] == '%' || s[i] == '!')
             containedSpecialChar = true;
     }
-
+    // se violations
+    if (string(s).find(se) != string::npos)
+        return -(300 + string(s).find(se));
+    // 2 consecutive characters violations
+    if (moreThan2ConsecutiveChar(s) != -1)
+        return -(400 + moreThan2ConsecutiveChar(s));
     // special characters violations
     if (!containedSpecialChar)
         return -5;
