@@ -66,6 +66,8 @@ int firstMeet(int & exp1, int & exp2, int e1) {
             default:
                 break;
         }
+        // ensure exp2 is in range [0, 600]
+        ensureExpRange(exp2);
         // calculate Sherlock's decsion 
         int D = e1 * 3 + exp1 * 7;
         // if D is an even number, his EXP wll be updated as follows:
@@ -134,7 +136,6 @@ int firstMeet(int & exp1, int & exp2, int e1) {
     // ensure exp1 and exp2 are in range [0, 600]
     ensureExpRange(exp1);
     ensureExpRange(exp2);
-
 
     return exp1 + exp2;
 }
