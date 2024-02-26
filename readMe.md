@@ -6,11 +6,11 @@ completed 5 tasks
 just deleted my main.cpp zzzz
 now i got to write all the testcase again ( thats ok it motivated me to use git more often)
 # 23/2/2024
-round up EXP, H and M only when calculating. if just compare, don't round up
-changed 164-166 from round up to normal counting
+round up EXP, H and M only when calculating. if just compare, don't round up <br>
+changed 164-166 from round up to normal counting <br>
 changed to if (abs(taxiScore[meetX][meetY]) > abs(snwScore[meetX][meetY])) in 348
 # 26/2/2024
-wrote some testcases
-checked firstMeet       --- done
-checked traceLuggage    --- done
-checked chaseTax        --- done
+wrote some testcases <br>
+checked firstMeet       --- done <br> 
+checked traceLuggage    --- done <br>
+checked chaseTax        --- done <br>
