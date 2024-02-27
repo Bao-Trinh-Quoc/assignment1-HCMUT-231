@@ -17,5 +17,6 @@ checked chaseTax        --- done <br>
 changed order of violations in checkPassword <br>
 changed logic in checkPassword --- valid char <br>
 checked findCorrectPassword --- done <br>
-
+# 27/2/2024
+ensure all stats are in range after every calculations 
 <---> testing for git credentials problem 

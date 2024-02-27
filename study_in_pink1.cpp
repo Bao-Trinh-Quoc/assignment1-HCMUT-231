@@ -83,6 +83,8 @@ int firstMeet(int & exp1, int & exp2, int e1) {
             exp1 = ceil(dou_exp1);
         }
     }
+    // ensure exp1 is in range [0, 600]
+    ensureExpRange(exp1);
     // in the case e1 is in range [4, 99], Sherlock explains how he knows Watson has
     // a brother, and the value of exp2 is updated as follows: 
     if (e1 >= 4 && e1 <= 99)
@@ -184,7 +186,10 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
                 double dou_HP1 = (double) HP1 * 1.1;
                 HP1 = ceil(dou_HP1);
                 M1 -= 70;
-            }        
+            }
+            // ensure HP1, M1 are in range
+            ensureHPRange(HP1);
+            ensureMRange(M1);        
             if (M1 < halfOfInitM)
                 goto end;
             // rent a taxi or carriage
@@ -194,6 +199,8 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
                 M1 -= 120; // take a carriage
             double dou_exp1 = (double) EXP1 * 1.13;
             EXP1 = ceil(dou_exp1);
+            // ensure EXP1 is in rage
+            ensureExpRange(EXP1);
             if (M1 < halfOfInitM)
                 goto end;            
             // meet a homeless person
@@ -203,6 +210,8 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
                 M1 -= 120;
             dou_exp1 = (double) EXP1 * 0.9;
             EXP1 = ceil(dou_exp1);
+            // ensure EXP1 is in rage
+            ensureExpRange(EXP1);
             if (M1 < halfOfInitM)
                 goto end;
         }
@@ -225,6 +234,9 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
                 HP1 = ceil(dou_HP1);
                 M1 -= 70;
             }
+            // ensure HP1, M1 are in range
+            ensureHPRange(HP1);
+            ensureMRange(M1);
             if (M1 <= 0)
                 goto end;
 
@@ -235,6 +247,9 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
                 M1 -= 120; // take a carriage
             double dou_exp1 = (double) EXP1 * 1.13;
             EXP1 = ceil(dou_exp1);
+            // ensure EXP1n M1 are in range
+            ensureMRange(M1);
+            ensureExpRange(EXP1);
             if (M1 <= 0)
                 goto end;
 
@@ -244,7 +259,9 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
             else if (EXP1 >= 300 && M1 >= 120)
                 M1 -= 120;
             dou_exp1 = (double) EXP1 * 0.9;
-            EXP1 = ceil(dou_exp1);       
+            EXP1 = ceil(dou_exp1); 
+            // ensure EXP! is in range
+            ensureExpRange(EXP1);      
     }
 end:
     // reduce HP by 17% and increase EXP by 17%
@@ -252,7 +269,9 @@ end:
     HP1 = ceil(dou_HP1);
     double dou_exp1 = (double) EXP1 * 1.17;
     EXP1 = ceil(dou_exp1);
-
+    // ensure HP1, EXP1, are in range
+    ensureHPRange(HP1);
+    ensureExpRange(EXP1);
     // probability for Sherlock to find the suitcase in road 2
     int S2 = nearestPerfectSquare(EXP1);
     if (EXP1 >= S2)
