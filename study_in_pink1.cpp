@@ -278,7 +278,7 @@ end:
         P2 = 100.0;
     else
     {
-        P2 = ((double) EXP1 / S2 + 80) / 123.0;
+        P2 = ( ((double) EXP1 / S2 + 80) / 123.0 ) * 100.0;
     }
         
     // road 3
@@ -309,7 +309,7 @@ end:
             double dou_exp1 = (double) EXP1 * 1.20;
             EXP1 = ceil(dou_exp1);          
         }
-    } 
+    }
     // Ensure HP1, EXP1, M1 are in range
     ensureHPRange(HP1);
     ensureExpRange(EXP1);

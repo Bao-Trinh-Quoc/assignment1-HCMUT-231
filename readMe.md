@@ -22,3 +22,4 @@ ensure all stats are in range after every calculations
 <---> testing for git credentials problem  <br>
 # 04/03/2024
 changed if condition at traceLuggage --> passed tc_1215 <br>
+changed the calculation of P2- 8:07pm<br>

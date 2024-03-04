@@ -26,6 +26,9 @@ void sa_tc_10();    // testcase for findCorrectPassword
 void tc_1215();     // testcase for traceLuggage 
 void tc_1221();      // testcase for traceLuggage
 void tc_1163();      // testcase for traceLuggage
+void tc_1243();      // testcase for traceLuggage
+void tc_1225();      // testcase for traceLuggage
+void tc_1219();     // testcase for traceLuggage
 
 int main(int argc, const char * argv[]) {
     // sa_tc_01();              // sample testcase
@@ -38,9 +41,12 @@ int main(int argc, const char * argv[]) {
     // sa_tc_08();              // testcase for checkPassword
     // sa_tc_09();                 // testcase for findCorrectPassword
     // sa_tc_10();                 // testcase for findCorrectPassword
-    tc_1215();                 // testcase for traceLuggage
-    tc_1221();                 // testcase for traceLuggage
-    tc_1163();                 // testcase for traceLuggage
+    // tc_1215();                 // testcase for traceLuggage
+    // tc_1221();                 // testcase for traceLuggage
+    // tc_1163();                 // testcase for traceLuggage
+    tc_1243();                 // testcase for traceLuggage
+    tc_1225();                 // testcase for traceLuggage
+    tc_1219();                 // testcase for traceLuggage
     return 0;
 }
 
@@ -160,6 +166,30 @@ void tc_1163()
 {
 std::cout << "----- Testcase 1163 -----" << std::endl;
 int E2 = 40, HP1 = 513, EXP1 = 47, M1 = 315;
+std::cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << std::endl;
+int result = traceLuggage(HP1, EXP1, M1, E2);
+std::cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << ", result: " << result << std::endl;
+}
+void tc_1243()
+{
+std::cout << "----- Testcase 1243 -----" << std::endl;
+int E2 = 98, HP1 = 89, EXP1 = 98, M1 = 89;
+std::cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << std::endl;
+int result = traceLuggage(HP1, EXP1, M1, E2);
+std::cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << ", result: " << result << std::endl;
+}
+void tc_1225()
+{
+std::cout << "----- Testcase 1225 -----" << std::endl;
+int E2 = 82, HP1 = 1, EXP1 = 11, M1 = 111;
+std::cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << std::endl;
+int result = traceLuggage(HP1, EXP1, M1, E2);
+std::cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << ", result: " << result << std::endl;
+}
+void tc_1219()
+{
+std::cout << "----- Testcase 1219 -----" << std::endl;
+int E2 = 60, HP1 = 287, EXP1 = 472, M1 = 2684;
 std::cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << std::endl;
 int result = traceLuggage(HP1, EXP1, M1, E2);
 std::cout << "E2: " << E2 << ", HP1: " << HP1 << ", EXP1: " << EXP1 << ", M1: " << M1 << ", result: " << result << std::endl;
