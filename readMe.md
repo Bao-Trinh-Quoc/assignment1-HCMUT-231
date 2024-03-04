@@ -19,4 +19,6 @@ changed logic in checkPassword --- valid char <br>
 checked findCorrectPassword --- done <br>
 # 27/2/2024
 ensure all stats are in range after every calculations 
-<---> testing for git credentials problem 
+<---> testing for git credentials problem  <br>
+# 04/03/2024
+changed if condition at traceLuggage --> passed tc_1215 <br>

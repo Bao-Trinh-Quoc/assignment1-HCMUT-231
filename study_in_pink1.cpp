@@ -241,9 +241,9 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
                 goto end;
 
             // rent a taxi or carriage
-            if (EXP1 < 400 && M1 >= 200)
+            if (EXP1 < 400)
                 M1 -= 200; // take a taxi
-            else if (EXP1 >= 400 && M1 >= 120)
+            else 
                 M1 -= 120; // take a carriage
             double dou_exp1 = (double) EXP1 * 1.13;
             EXP1 = ceil(dou_exp1);
@@ -254,14 +254,14 @@ int traceLuggage(int & HP1, int & EXP1, int & M1, int E2) {
                 goto end;
 
             // meet a homeless person
-            if (EXP1 < 300 && M1 >= 100)
+            if (EXP1 < 300)
                 M1 -= 100;
-            else if (EXP1 >= 300 && M1 >= 120)
+            else 
                 M1 -= 120;
             dou_exp1 = (double) EXP1 * 0.9;
             EXP1 = ceil(dou_exp1); 
             // ensure EXP! is in range
-            ensureExpRange(EXP1);      
+            ensureExpRange(EXP1);     
     }
 end:
     // reduce HP by 17% and increase EXP by 17%
